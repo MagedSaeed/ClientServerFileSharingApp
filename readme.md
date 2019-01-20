@@ -97,3 +97,6 @@ Database
 
 In order to achieve the above operation, a sort of database structure shall be maintained. However, building a huge database infrastructure such as SQLServer or Oracle database server will overcome the simplicity and elegancy of this application. The goal, though, is to come up with an in-between solution. Suggestions are to use *json* or *xml* as they are simple and sufficient enough. A nice python library performing this job is, fortunately, available. It is called *tinydb* and linked here: https://pypi.org/project/tinydb/. It maintains a *json* structure simplifying database operations and queries.
 
+Contact
+======
+This application is done as an assignment to a client-server progarmming graduate course. However, it turns out that it worths publishing. Please report any issues or inqueries you have either by opening an issue here in this repository or e-mail me on mageedsaeed1@gmail.com. Thanks in advance.
