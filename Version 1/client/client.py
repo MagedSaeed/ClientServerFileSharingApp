@@ -293,7 +293,6 @@ def create_user(soc):
     user_name = validate_username()
     passowrd = validate_password()
     server_response = send_to_server("0|"+user_name+"|"+passowrd, soc, server_address)
-    print(server_response)
     if int(server_response) == 1:
         print("Your user account has been created successfully.")
         login_user(soc)
