@@ -32,7 +32,11 @@ Please make sure that the following libraries are available. Use the well-known 
 
 
 Impelentation Details
-=================
+====================
+
+## Concurrency
+
+The program tries to achieve concurrnecy using threads. However, this is packed with a limitation in hand. The biggest file size can be uploaded to the server is the largest size a UDP packet can handle which is 65000 byte.
 
 ## Control Flow design:
 
@@ -55,7 +59,7 @@ When the *client.py* runs, it will ask the user to assure server information. If
 
 
 Connection Protocol
-================
+==================
 
 This section will show the commands used by the client application and the protocol used to communicate with the server.  The client application uses flags to indicate the required command. The server application will receive this flag and respond accordingly. The list of commands are as follows:
 

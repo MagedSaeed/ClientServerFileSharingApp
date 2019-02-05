@@ -128,7 +128,7 @@ def validate_password():
         print("The password shall be 3 chars at least.")
         print("The user name shall not contain the character \'|\' or space character")
         password = str(getpass.getpass("Please choose your password (chars will not appear):"))
-        if len(password)>3 and '|' not in password and ' ' not in password:
+        if len(password)>=3 and '|' not in password and ' ' not in password:
             break
         else:    
             print("Not an appropriate password. Please try again. Please note the following:")

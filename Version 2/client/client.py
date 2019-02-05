@@ -88,11 +88,8 @@ def upload_file(soc, filepath):
     else:
         f = open(filepath,"rb")
         data = f.read(bufferSize)
+        soc.sendto(data,server_address)
         res = None
-        while data:
-            res = soc.sendto(data, server_address)
-            data = f.read(bufferSize)
-            time.sleep(0.1) # not to overwhelm the server
         print("The file is uploaded successfully")
     return
 
@@ -128,7 +125,7 @@ def validate_password():
         print("The password shall be 3 chars at least.")
         print("The user name shall not contain the character \'|\' or space character")
         password = str(getpass.getpass("Please choose your password (chars will not appear):"))
-        if len(password)>3 and '|' not in password and ' ' not in password:
+        if len(password)>=3 and '|' not in password and ' ' not in password:
             break
         else:    
             print("Not an appropriate password. Please try again. Please note the following:")
